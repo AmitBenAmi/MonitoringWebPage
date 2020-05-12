@@ -18,7 +18,7 @@ def check_web_page():
 
 def send_slack(text):
     slack_connection = http.client.HTTPSConnection(host='hooks.slack.com', port=443, timeout=10)
-    slack_connection.request(method='POST', url='/services/T0127J4SKLN/B012ECGSF98/N4r3YnguOpZmH6TTaAvLK39c', body=json.dumps({'text': text}))
+    slack_connection.request(method='POST', url='url-to-slack-channel', body=json.dumps({'text': text}))
     slack_connection.getresponse()
 
 while True:
